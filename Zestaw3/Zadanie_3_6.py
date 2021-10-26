@@ -28,8 +28,5 @@ def main():
     draw()
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
-=======
-    main()
->>>>>>> 47ad6120eed2829820155f8a4ed212d1eecd37ba
+
