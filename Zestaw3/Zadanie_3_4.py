@@ -7,9 +7,12 @@ def main_loop():
         user_input = input("Write real number or write \'stop\' to end the program: ")
         if(user_input == 'stop'):
             break
-        user_input = float(user_input)
-        num_3th = pow(user_input, 3)
-        print("Written number: " + str(user_input) + " Third power of written number: " + str(num_3th))
+        try:
+            user_input = float(user_input)
+            num_3th = pow(user_input, 3)
+            print("Written number: " + str(user_input) + " Third power of written number: " + str(num_3th))
+        except ValueError:
+            print('You didn\'t write a number, try again')
 
 def main():
     main_loop()
