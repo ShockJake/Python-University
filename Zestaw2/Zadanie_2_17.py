@@ -1,3 +1,5 @@
+# Posortować wyrazy z napisu line raz alfabetycznie, a raz pod względem długości.
+
 from enum import Enum
 
 class Sort(Enum):
