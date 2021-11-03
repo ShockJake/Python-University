@@ -8,7 +8,7 @@ def func():
 
     print(line)
 
-    print(line.__len__())
+    print(len(line))
 
 def main():
     func()

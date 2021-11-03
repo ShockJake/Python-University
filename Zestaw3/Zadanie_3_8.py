@@ -9,8 +9,8 @@ def commonElements():
     all_elements = []
     
     for i in range(len(sequence_1)):
-        if sequence_1[i] not in all:
-            all.append(sequence_1[i])
+        if sequence_1[i] not in all_elements:
+            all_elements.append(sequence_1[i])
         if sequence_2.find(sequence_1[i]) != -1:
             if (sequence_1[i]) not in commonElements:
                 commonElements.append(sequence_1[i])

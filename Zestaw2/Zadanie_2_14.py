@@ -5,11 +5,7 @@ def findLongestWord(string):
 
     line = string.split()
 
-    word = ''
-
-    for i in line:
-        if len(word) < len(i):
-            word = i
+    word = max(line)
 
     print("The biggest word: " + word)
     print("Length of the biggest word: " + str(len(word))) 

@@ -13,7 +13,10 @@ def draw():
     result += char2
     for i in range(size + 1):
         result += str(i)
-        result += '    '
+        if(len(str(i)) == 1):
+            result += '    '
+        if(len(str(i)) >= 2):
+            result += '   '
     print(result)
 
 
