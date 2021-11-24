@@ -8,15 +8,15 @@ class Poly:
         return str(self.a)
 
     def __add__(self, other: object):
-        if isinstance(other, Poly) == False:
+        if not isinstance(other, Poly):
             raise Exception("Trying to add two different objects")
-        firstLen = self.size
-        secondLen = other.size
-        if firstLen >= secondLen:
-            for i in range(firstLen):
+        first_length = self.size
+        second_length = other.size
+        if first_length >= second_length:
+            for i in range(first_length):
                 self.a[i] += other.a[i]
             return self
-        elif firstLen < secondLen:
+        elif first_length < second_length:
             for i in range(other.size):
                 other.a[i] += self.a[i]
             return other
