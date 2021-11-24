@@ -115,5 +115,5 @@ class Poly:
             else:
                 wsp = pow(other, i)
                 wsp.mul(self.a[i])
-                
+    # ----------------------------------
         
