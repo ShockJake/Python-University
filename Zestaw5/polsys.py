@@ -104,7 +104,6 @@ def diff_poly(poly):
         return poly
     return poly
 
-l1 = [0, 0, 2, 3]
-l2 = [1, 2]
-
+l1 = [1, 1, 1]
+l2 = [0, 1, 1]
 print(combine_poly(l2, l1))
