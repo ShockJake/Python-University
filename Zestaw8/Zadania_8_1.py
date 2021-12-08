@@ -19,7 +19,10 @@ def solve1(a, b, c):
         y = str(y1) + ' * r - ' + str(y2)
         print('Pierwiastkiem równania jest każda para liczb w postaci (r, ' +
               y + '), gdize r wybieramy dowolnie.')
-
+    if a == 0 and b == 0:
+        print('Sprzeczność')
+    if a == 0 and b == 0 and c == 0:
+        print('0 = 0')
 
 def main():
     solve1(2, 3, 4)
