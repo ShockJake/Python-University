@@ -1,4 +1,4 @@
-# -*- coding utf-8 -*-
+# -*- coding: utf-8 -*-
 # Zbadać problem szukania rozwiązań równania liniowego postaci a * x + b * y + c = 0.
 # Podać specyfikację problemu. Podać algorytm rozwiązania w postaci listy kroków,
 # schematu blokowego, drzewa. Podać implementację algorytmu w Pythonie w postaci funkcji solve1(),
