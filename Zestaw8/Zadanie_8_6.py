@@ -35,12 +35,16 @@ def dynamicP(i, j):
     return A[i][j]
 
 
-time_of_start = time.time()
-print(dynamicP(21, 7))
-time_of_end = time.time()
-print("Dynamic solution time: " + str(time_of_end - time_of_start))
+def main():
+    time_of_start = time.time()
+    print(dynamicP(21, 7))
+    time_of_end = time.time()
+    print("Dynamic solution time: " + str(time_of_end - time_of_start))
 
-time_of_start = time.time()
-print(recursiveP(21, 7))
-time_of_end = time.time()
-print("Recursive solution time: " + str(time_of_end - time_of_start))
+    time_of_start = time.time()
+    print(recursiveP(21, 7))
+    time_of_end = time.time()
+    print("Recursive solution time: " + str(time_of_end - time_of_start))
+
+if __name__ == '__main__':
+    main()
