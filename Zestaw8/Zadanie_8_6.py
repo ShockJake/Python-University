@@ -15,7 +15,7 @@ def recursiveP(i, j):
         return 0.5*(recursiveP(i-1, j) + recursiveP(i, j-1))
 
 
-def dynapicP(i, j):
+def dynamicP(i, j):
 
     A = [None] * (i+1)
     for z in range(i+1):
@@ -36,7 +36,7 @@ def dynapicP(i, j):
 
 
 time_of_start = time.time()
-print(dynapicP(21, 7))
+print(dynamicP(21, 7))
 time_of_end = time.time()
 print("Dynamic solution time: " + str(time_of_end - time_of_start))
 
