@@ -57,27 +57,24 @@ class SingleList:
     def remove_tail(self):   # klasy O(n)
         # Zwraca cały węzeł, skraca listę.
         # Dla pustej listy rzuca wyjątek ValueError.
-        if self.length == 0:
+        if self.is_empty():
             raise ValueError("Pusta lista")
+        node = self.head
+        if self.head == self.tail:
+            to_remove = self.tail
+            self.head = self.tail = None
+            self.length = 0
+            return to_remove
         else:
-            node = self.head
-            if self.head == self.tail:
-                to_remove = self.tail
-                self.head = self.tail = None
-                self.length = 0
-                return to_remove
-            else:
-                while node.next != self.tail:
-                    node = node.next
-                to_remove = self.tail
-                node.next = None
-                self.tail = node
-                self.length -= 1
-                return to_remove
+            while node.next != self.tail:
+                node = node.next
+            to_remove = self.tail
+            node.next = None
+            self.tail = node
+            self.length -= 1
+            return to_remove
 
-            
-        
-    def join(self, other : object):    # klasy O(1)
+    def join(self, other: object):    # klasy O(1)
         # Węzły z listy other są przepinane do listy self na jej koniec.
         # Po zakończeniu operacji lista other ma być pusta.
         if other.is_empty():
@@ -100,11 +97,13 @@ class SingleList:
             del node
         self.head = self.tail = None
 
-def printList(list : SingleList):
+
+def printList(list: SingleList):
     node = list.head
     for i in range(list.length):
         print(node.data)
         node = node.next
+
 
 def main():
     sL = SingleList()
@@ -113,22 +112,20 @@ def main():
     sL.insert_tail(Node(13))
     sL.insert_tail(Node(14))
     sL.insert_tail(Node(15))
-    
+
     printList(sL)
     sL.remove_tail()
     printList(sL)
-    
+
     sL2 = SingleList()
     sL2.insert_head(Node(16))
     sL2.insert_tail(Node(17))
     sL2.insert_tail(Node(18))
     sL2.insert_tail(Node(19))
     sL2.insert_tail(Node(20))
-    
+
     sL.join(sL2)
     printList(sL)
-        
-        
 
 
 if __name__ == '__main__':
