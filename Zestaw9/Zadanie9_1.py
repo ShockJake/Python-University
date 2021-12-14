@@ -100,10 +100,14 @@ class SingleList:
 
 def printList(list: SingleList):
     node = list.head
-    for i in range(list.length):
-        print(node.data)
+    result = ''
+    result += '[ '
+    for i in range(list.length - 1):
+        result += str(node.data) + ', '
         node = node.next
-
+    result += str(node.data)
+    result += ' ]'
+    print(result)
 
 def main():
     sL = SingleList()
