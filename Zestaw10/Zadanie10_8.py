@@ -23,7 +23,7 @@ class RandomQueue:
 
     def remove(self):   # zwraca losowy element
         if self.is_empty():
-            raise ValueError('Queue is empty and not operable')
+            raise ValueError('Queue is empty')
         else:
             random_index = int(random() * self.tail)
             result = self.items[random_index]

@@ -28,7 +28,7 @@ class Queue:
 
     def get(self):
         if self.is_empty():
-            raise ValueError('Queue is empty and not operable')
+            raise ValueError('Queue is empty')
         data = self.items[self.head]
         self.items[self.head] = None   # usuwam referencję
         self.head = (self.head + 1) % self.n
