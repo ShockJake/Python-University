@@ -52,6 +52,9 @@ class TestQueue(unittest.TestCase):
         self.q.put(3)
         self.q.put(2)
 
+    def test__init__(self):
+        self.assertEqual(self.queue.n, 5)
+
     def test_is_empty(self):
         self.assertEqual(self.q.is_empty(), False)
 
