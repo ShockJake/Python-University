@@ -4,8 +4,8 @@ class AVLTree:
     class Node:
         def __init__(self, value):
             self.value = value
-            self.left: AVLTree.Node = None
-            self.right: AVLTree.Node = None
+            self.left = None
+            self.right = None
             self.height = 1
 
     class EmptyTreeException(Exception):
@@ -15,7 +15,7 @@ class AVLTree:
 
     # Basic constructor
     def __init__(self):
-        self.root: AVLTree.Node = None
+        self.root = None
 
     #   --- Private helping methods ---
 
@@ -30,7 +30,7 @@ class AVLTree:
         return self.__getHeight(node.left) - self.__getHeight(node.right)
 
     def __rightRotateNode(self, node: Node) -> Node:
-        t1: AVLTree.Node = node.left
+        t1 = node.left
         t2 = t1.right
 
         t1.right = node
@@ -44,7 +44,7 @@ class AVLTree:
         return t1
 
     def __leftRotateNode(self, node: Node) -> Node:
-        t1: AVLTree.Node = node.right
+        t1 = node.right
         t2 = t1.left
 
         t1.left = node
@@ -73,7 +73,7 @@ class AVLTree:
 
     def __insert(self, node: Node, value) -> Node:
         if node == None:
-            return AVLTree.Node(value)
+            return self.Node(value)
 
         if value < node.value:
             node.left = self.__insert(node.left, value)
@@ -113,9 +113,9 @@ class AVLTree:
         else:
             if node.left == None or node.right == None:
                 if node.left != None:
-                    newNode: AVLTree.Node = node.left
+                    newNode: self.Node = node.left
                 else:
-                    newNode: AVLTree.Node = node.right
+                    newNode: self.Node = node.right
 
                 if newNode == None:
                     newNode = node
@@ -123,7 +123,7 @@ class AVLTree:
                 else:
                     node = newNode
             else:
-                newNode: AVLTree.Node = self.__findMinNode(node.right)
+                newNode: self.Node = self.__findMinNode(node.right)
                 node.value = newNode.value
                 node.right = self.__remove(node.right, newNode.value)
 
