@@ -31,6 +31,12 @@ class TestTree(unittest.TestCase):
         self.tree.remove(8)
         self.assertEqual(self.tree.printInOrder(), '9 10 11 13 ')
     
+    def test_findMin(self):
+        self.assertEqual(self.tree.findMinNodeValue(), 8)
+    
+    def test_findMax(self):
+        self.assertEqual(self.tree.findMaxNodeValue(), 13)
+    
     def test_contains(self):
         self.assertTrue(self.tree.contains(10))
         self.assertFalse(self.tree.contains(12))
