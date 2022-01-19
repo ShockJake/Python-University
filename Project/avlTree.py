@@ -194,14 +194,17 @@ class AVLTree:
 
     # --- Public methods ---
 
+    # Checks if Tree is empty
     def isEmpty(self) -> bool:
         return self.root == None
 
+    # Finds a node with the smallest value and returns value
     def findMinNodeValue(self):
         if self.isEmpty():
             raise self.EmptyTreeException()
         return self.__findMinNode(self.root).value
 
+    # Finds a node with the biggest value and returns value
     def findMaxNodeValue(self):
         if self.isEmpty():
             raise self.EmptyTreeException()
