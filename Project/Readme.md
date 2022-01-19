@@ -58,6 +58,7 @@ AVLTree()
 
 ![AVLTree example](./png/AVL_Tree_Example.gif 'AVLTree example')
 source: en.wikipedia.org/wiki/AVL_tree#/media/File:AVL_Tree_Example.gif
+
 - ### Public methods
 
 ```python
