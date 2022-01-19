@@ -1,4 +1,4 @@
-
+# Implemetetation of AVL Tree using Python
 class AVLTree:
 
     class Node:
@@ -105,7 +105,6 @@ class AVLTree:
     def __remove(self, node: Node, value) -> Node:
         if node == None:
             return node
-
         if value < node.value:
             node.left = self.__remove(node.left, value)
         elif value > node.value:
@@ -116,7 +115,6 @@ class AVLTree:
                     newNode: self.Node = node.left
                 else:
                     newNode: self.Node = node.right
-
                 if newNode == None:
                     newNode = node
                     node = None
@@ -126,13 +124,12 @@ class AVLTree:
                 newNode: self.Node = self.__findMinNode(node.right)
                 node.value = newNode.value
                 node.right = self.__remove(node.right, newNode.value)
-
         if node == None:
             return node
-
+        
         node.height = 1 + max(self.__getHeight(node.left),
                               self.__getHeight(node.right))
-
+        
         balance = self.__getBalance(node)
 
         if balance > 1:
@@ -217,10 +214,10 @@ class AVLTree:
         self.root = self.__insert(self.root, value)
 
     # Removes element from the tree.
-    def remove(self, data):
+    def remove(self, value):
         if self.isEmpty():
             raise
-        self.root = self.__remove(self.root, data)
+        self.root = self.__remove(self.root, value)
 
     # Checks if three contains element with given value.
     def contains(self, value) -> bool:
