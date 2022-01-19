@@ -57,6 +57,7 @@ AVLTree()
 - ### Operations
 
 ![AVLTree example](./png/AVL_Tree_Example.gif 'AVLTree example')
+
 source: en.wikipedia.org/wiki/AVL_tree#/media/File:AVL_Tree_Example.gif
 
 - ### Public methods
@@ -149,6 +150,7 @@ myTree.printInOrder()
 ```
 
 ![Inorder-traversal](./png/Inorder-traversal.gif 'Inorder-traversal')
+
 source: commons.wikimedia.org/wiki/File:Inorder-traversal.gif
 
 Returns string that contains all elements of the tree in the In order.
@@ -160,6 +162,7 @@ myTree.printPreOrder()
 ```
 
 ![Preorder-traversal](./png/Preorder-traversal.gif 'Preorder-traversal')
+
 source: commons.wikimedia.org/wiki/File:Preorder-traversal.gif
 
 Returns string that contains all elements of the tree in the Pre order.
@@ -171,6 +174,7 @@ myTree.printPostOrder()
 ```
 
 ![Postorder-traversal](./png/Postorder-traversal.gif 'Postorder-traversal')
+
 source: commons.wikimedia.org/wiki/File:Postorder-traversal.gif
 
 Returns string that contains all elements of the tree in the Post order.
