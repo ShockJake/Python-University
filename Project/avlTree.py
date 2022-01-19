@@ -231,17 +231,17 @@ class AVLTree:
             raise self.EmptyTreeException()
         self.root = self.__clearNodes(self.root)
 
-    def printInOrder(self):
+    def printInOrder(self) -> str:
         if self.isEmpty():
             raise self.EmptyTreeException()
         return self.__printInOrder(self.root)
 
-    def printPreOrder(self):
+    def printPreOrder(self) -> str:
         if self.isEmpty():
             raise self.EmptyTreeException()
         return self.__printPreOrder(self.root)
 
-    def printPostOrder(self):
+    def printPostOrder(self) -> str:
         if self.isEmpty():
             raise self.EmptyTreeException()
         return self.__printPostOrder(self.root)
