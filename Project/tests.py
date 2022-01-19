@@ -1,5 +1,7 @@
 # Tests for AVLTree class:
 
+# tests are done with Python 3.9.10 version
+
 import unittest
 from avlTree import *
 
