@@ -147,13 +147,17 @@ myTree.printInOrder()
 
 ![Inorder-traversal](./png/Inorder-traversal.gif 'Inorder-traversal')
 
+Returns string that contains all elements of the tree in the In order.
+
 ---
 
 ```Python
 myTree.printPreOrder()
 ```
+
 ![Preorder-traversal](./png/Preorder-traversal.gif 'Preorder-traversal')
 
+Returns string that contains all elements of the tree in the Pre order.
 
 ---
 
@@ -162,6 +166,8 @@ myTree.printPostOrder()
 ```
 
 ![Postorder-traversal](./png/Postorder-traversal.gif 'Postorder-traversal')
+
+Returns string that contains all elements of the tree in the Post order.
 
 ---
 
